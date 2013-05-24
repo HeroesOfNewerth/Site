@@ -1,6 +1,9 @@
-﻿<?
-session_start();
+﻿<?session_start();?>
+<?
+
+include("check.php");
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 	<head>
@@ -797,7 +800,7 @@ else{?>
 
 
 
-<form id="f2p" name="f2p" action="check.php" method="post" onsubmit="return validateForm()">
+<form id="f2p" name="f2p" action="" method="post" onsubmit="return validateForm()">
 	<div id="theAccount" class="gDark default">
 	<?if($_SESSION['registered'] == 4) {unset($_SESSION['registered']);?>
 	<br><center style="color:red">Такой EMAIL уже есть!</center>
