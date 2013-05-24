@@ -1,19 +1,6 @@
 п»ї<?
 session_start();
-if($_REQUEST['Registre']) {
-echo "lalkareg";
-
-}
-function phpfuck(){
-return 123;
-}
-
-
-
-
-
 ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
 	<head>
@@ -318,9 +305,9 @@ return 123;
 	}
 function validateForm()
 {
-if(document.forms["f2p"]["nickname"].value == "" || document.forms["f2p"]["nickname"].value == "Логин") {
+if(document.forms["f2p"]["nickname"].value == "" || document.forms["f2p"]["nickname"].value == "Р›РѕРіРёРЅ") {
 
-alert('Введите Логин');
+alert('Р’РІРµРґРёС‚Рµ Р›РѕРіРёРЅ');
 return false;
 }
 else {
@@ -332,17 +319,17 @@ if(document.forms["f2p"]["txtInput"].value == "Heroes of Newerth") {
 return true
 }
 else {
-alert("Ответ на вопрос не верный");
+alert("РћС‚РІРµС‚ РЅР° РІРѕРїСЂРѕСЃ РЅРµ РІРµСЂРЅС‹Р№");
 return false;
 }
 }
 else {
-alert("Пароли не совпадают");
+alert("РџР°СЂРѕР»Рё РЅРµ СЃРѕРІРїР°РґР°СЋС‚");
 return false;
 }
 }
 else
-{ alert("Email не совпадают");
+{ alert("Email РЅРµ СЃРѕРІРїР°РґР°СЋС‚");
 return false;
 }
 
@@ -813,31 +800,31 @@ else{?>
 <form id="f2p" name="f2p" action="check.php" method="post" onsubmit="return validateForm()">
 	<div id="theAccount" class="gDark default">
 	<?if($_SESSION['registered'] == 4) {unset($_SESSION['registered']);?>
-	<br><center style="color:red">Такой EMAIL уже есть!</center>
+	<br><center style="color:red">РўР°РєРѕР№ EMAIL СѓР¶Рµ РµСЃС‚СЊ!</center>
 	<?}?>
 	<?if($_SESSION['registered'] == 3) {unset($_SESSION['registered']);?>
-	<br><center style="color:red">Такой ЛОГИН уже есть!</center>
+	<br><center style="color:red">РўР°РєРѕР№ Р›РћР“РРќ СѓР¶Рµ РµСЃС‚СЊ!</center>
 	<?}?>
 	<?if($_SESSION['registered'] == 2) {unset($_SESSION['registered']);?>
-	<br><center style="color:red">Не удалось пройти регистрацию!</center>
+	<br><center style="color:red">РќРµ СѓРґР°Р»РѕСЃСЊ РїСЂРѕР№С‚Рё СЂРµРіРёСЃС‚СЂР°С†РёСЋ!</center>
 	<?}?>
 		<div id="accountID" class="subTitle">
-			<p id="yourname-label">ВАШ ЛОГИН</p>
+			<p id="yourname-label">Р’РђРЁ Р›РћР“РРќ</p>
 		</div>
 
-		<input id="nickname" class="white" type="text" name="nickname"  placeholder="Логин" value="Логин" onFocus="if (this.value == 'Логин') { this.value = '';}" onblur="if (this.value == '') { this.value = 'Логин';} else{nick_func();}"/>
+		<input id="nickname" class="white" type="text" name="nickname"  placeholder="Р›РѕРіРёРЅ" value="Р›РѕРіРёРЅ" onFocus="if (this.value == 'Р›РѕРіРёРЅ') { this.value = '';}" onblur="if (this.value == '') { this.value = 'Р›РѕРіРёРЅ';} else{nick_func();}"/>
 
 		<!-- Check Button 
 		<div id="checkButton"><input type="submit" name="check" class="redbtn"value="CHECK"></div>-->
 
 		<div class="fillMe">
-			<p>Имя:</p>
-			<input id="firstName" class="white" type="text" name="first_name" value="Имя" placeholder="Имя" onClick="if (this.value == 'Имя'){this.value = '';}" onBlur="if (this.value == ''){this.value='Имя';}" />
+			<p>РРјСЏ:</p>
+			<input id="firstName" class="white" type="text" name="first_name" value="РРјСЏ" placeholder="РРјСЏ" onClick="if (this.value == 'РРјСЏ'){this.value = '';}" onBlur="if (this.value == ''){this.value='РРјСЏ';}" />
 		</div>
 
 		<div class="fillMe">
-			<p>Фамилия:</p>
-			<input id="lastName" class="white" type="text" name="last_name" value="Фамилия" placeholder="Фамилия" placeholder="Фамилия" onClick="if (this.value == 'Фамилия'){this.value = '';}" onBlur="if (this.value == ''){this.value='Фамилия';}" />
+			<p>Р¤Р°РјРёР»РёСЏ:</p>
+			<input id="lastName" class="white" type="text" name="last_name" value="Р¤Р°РјРёР»РёСЏ" placeholder="Р¤Р°РјРёР»РёСЏ" placeholder="Р¤Р°РјРёР»РёСЏ" onClick="if (this.value == 'Р¤Р°РјРёР»РёСЏ'){this.value = '';}" onBlur="if (this.value == ''){this.value='Р¤Р°РјРёР»РёСЏ';}" />
 		</div>
 
 		<div class="fillMe">
@@ -846,37 +833,37 @@ else{?>
 		</div>
 
 		<div class="fillMe">
-			<p>Подтвердите Email:</p>
-			<input class="email white" type="text" id="check1" name="email2" value="Подтвердите EMAIL" placeholder="Подтвердите EMAIL" onClick="if (this.value == 'Подтвердите EMAIL'){this.value = '';}" onBlur="if (this.value == ''){this.value='Подтвердите EMAIL';}" />
+			<p>РџРѕРґС‚РІРµСЂРґРёС‚Рµ Email:</p>
+			<input class="email white" type="text" id="check1" name="email2" value="РџРѕРґС‚РІРµСЂРґРёС‚Рµ EMAIL" placeholder="РџРѕРґС‚РІРµСЂРґРёС‚Рµ EMAIL" onClick="if (this.value == 'РџРѕРґС‚РІРµСЂРґРёС‚Рµ EMAIL'){this.value = '';}" onBlur="if (this.value == ''){this.value='РџРѕРґС‚РІРµСЂРґРёС‚Рµ EMAIL';}" />
 		</div>
 
 		<div class="fillMe">
-			<p>Пароль:</p>
-			<input class="password white" type="text" name="password" value="Пароль" placeholder="Пароль" onClick="nick_func()" onfocus="if(this.type=='text'){this.type='password';this.value='';}" />
+			<p>РџР°СЂРѕР»СЊ:</p>
+			<input class="password white" type="text" name="password" value="РџР°СЂРѕР»СЊ" placeholder="РџР°СЂРѕР»СЊ" onClick="nick_func()" onfocus="if(this.type=='text'){this.type='password';this.value='';}" />
 		</div>
 
 		<div class="fillMe">
-			<p>Подтвердите Пароль:</p>
-			<input class="password white" type="text" name="password2" value="Подтвердите Пароль" placeholder="Подтвердите Пароль" onfocus="if(this.type=='text'){this.type='password';this.value='';}" />
+			<p>РџРѕРґС‚РІРµСЂРґРёС‚Рµ РџР°СЂРѕР»СЊ:</p>
+			<input class="password white" type="text" name="password2" value="РџРѕРґС‚РІРµСЂРґРёС‚Рµ РџР°СЂРѕР»СЊ" placeholder="РџРѕРґС‚РІРµСЂРґРёС‚Рµ РџР°СЂРѕР»СЊ" onfocus="if(this.type=='text'){this.type='password';this.value='';}" />
 		</div>
 
 		<input type="hidden" id="io_HoN_BBq" name="io_HoN_BBq" >
 
 		<div class="fillMe" style="margin: 2px 0 0 -1px">
-			<p>Пригласил:</p>
-			<input style="width: 730px;" class="referral white" type="text" name="referrer_nick" placeholder="Аккаунт Пользователя" />
-			<p class="subTitleSM" style="width: 730px;">Если вас сюда запросил друг, укажите его аккаунт в этом поле.</p>
+			<p>РџСЂРёРіР»Р°СЃРёР»:</p>
+			<input style="width: 730px;" class="referral white" type="text" name="referrer_nick" placeholder="РђРєРєР°СѓРЅС‚ РџРѕР»СЊР·РѕРІР°С‚РµР»СЏ" />
+			<p class="subTitleSM" style="width: 730px;">Р•СЃР»Рё РІР°СЃ СЃСЋРґР° Р·Р°РїСЂРѕСЃРёР» РґСЂСѓРі, СѓРєР°Р¶РёС‚Рµ РµРіРѕ Р°РєРєР°СѓРЅС‚ РІ СЌС‚РѕРј РїРѕР»Рµ.</p>
 		</div>
 
 		<!-- ALTERNATIVE -->
 		<div id="captHolder">
-			<p class="subTitleSM" style="border-top: 1px solid #333333; margin: -10px 0 10px 10px; padding-top: 10px; width: 770px;">Введите правильный ответ на заданый вопрос для регистрации на сайте.</p>
-	             <div style="position: absolute; left: 100px; top: 30px;">Как расшифровать HON?:</div>
+			<p class="subTitleSM" style="border-top: 1px solid #333333; margin: -10px 0 10px 10px; padding-top: 10px; width: 770px;">Р’РІРµРґРёС‚Рµ РїСЂР°РІРёР»СЊРЅС‹Р№ РѕС‚РІРµС‚ РЅР° Р·Р°РґР°РЅС‹Р№ РІРѕРїСЂРѕСЃ РґР»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё РЅР° СЃР°Р№С‚Рµ.</p>
+	             <div style="position: absolute; left: 100px; top: 30px;">РљР°Рє СЂР°СЃС€РёС„СЂРѕРІР°С‚СЊ HON?:</div>
 			
 			<div style="position: absolute; left: 227px; top: 30px;">
 				<!-- Refresh Button -->
 			<br>
-				<input class="white" type="text" name="txtInput" id="txtInput" size="30" style="bottom: -9px; left: 26px; position: absolute; width: 490px;" value="Введите ответ..." placeholder="Введите ответ..." onClick="if (this.value == 'Введите ответ...'){this.value = '';}" onBlur="if (this.value == ''){this.value='Введите ответ...';}" />
+				<input class="white" type="text" name="txtInput" id="txtInput" size="30" style="bottom: -9px; left: 26px; position: absolute; width: 490px;" value="Р’РІРµРґРёС‚Рµ РѕС‚РІРµС‚..." placeholder="Р’РІРµРґРёС‚Рµ РѕС‚РІРµС‚..." onClick="if (this.value == 'Р’РІРµРґРёС‚Рµ РѕС‚РІРµС‚...'){this.value = '';}" onBlur="if (this.value == ''){this.value='Р’РІРµРґРёС‚Рµ РѕС‚РІРµС‚...';}" />
 			</div>
 		</div>
 
@@ -892,18 +879,18 @@ else{?>
 	</div>
 
 	<div id="theSignup" class="gDark">
-		<input type="submit" id="button" name="Register" value="Регистрация" class="show_popup redbtn"/>
+		<input type="submit" id="button" name="Register" value="Р РµРіРёСЃС‚СЂР°С†РёСЏ" class="show_popup redbtn"/>
 		<p class="default" style="text-align: center; padding: 6px;">By clicking the sign up button, you are agreeing to the <a href="../documents/tos/default.htm">terms of use</a>.
 	</div>
 </form>
 <!-- Review Email Confirmation -->
 <div id="reviewOrder" class="parent_panel gDark">
 	<a onClick="$('#reviewOrder').hide();" class="close_popup closeMe"></a>
-	<div class="pop-header"><div class="redeem-title">Поздравления!</div></div>
+	<div class="pop-header"><div class="redeem-title">РџРѕР·РґСЂР°РІР»РµРЅРёСЏ!</div></div>
 	<div class="order-box" style="float: left; width: 100%; height: 227px;">
-		<div class="description-title subTitle">Ваш аккаунт успешно создан!</div>
+		<div class="description-title subTitle">Р’Р°С€ Р°РєРєР°СѓРЅС‚ СѓСЃРїРµС€РЅРѕ СЃРѕР·РґР°РЅ!</div>
 
-		<div class="textfield-title default">Теперь вы можете зайти на сайт, как его полноценный пользователь!</div>
+		<div class="textfield-title default">РўРµРїРµСЂСЊ РІС‹ РјРѕР¶РµС‚Рµ Р·Р°Р№С‚Рё РЅР° СЃР°Р№С‚, РєР°Рє РµРіРѕ РїРѕР»РЅРѕС†РµРЅРЅС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ!</div>
 	</div>
 	<!--<a href="www.heroesofnewerth.com/download/default.htm"><input class="review-purchase-button redbtn" type="submit" name="submit" value="Download" /></a>-->
 </div>
